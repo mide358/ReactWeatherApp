@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import Form from "react-bootstrap/Form";
-import Modal from "react-bootstrap/Modal";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { getWeatherData } from "./data/weatherapi";
+import React, { useState, useEffect } from 'react';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { getWeatherData } from './data/weatherapi';
 
 function Weather() {
   const [weatherdata, setweatherData] = useState(null);
-  const [city, setCity] = useState("Abuja");
-  const [country, setCountry] = useState("Nigeria");
+  const [city, setCity] = useState('Abuja');
+  const [country, setCountry] = useState('Nigeria');
   const [isOpen, setIsOpen] = useState(false);
 
   const showModal = () => {
@@ -32,7 +32,7 @@ function Weather() {
   }
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   return (
     <div className="row mx-auto">
